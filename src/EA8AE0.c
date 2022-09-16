@@ -30,7 +30,22 @@ INCLUDE_ASM(s32, "EA8AE0", func_80240DA4_EA9884);
 
 INCLUDE_ASM(s32, "EA8AE0", func_80240E2C_EA990C);
 
-INCLUDE_ASM(s32, "EA8AE0", func_802413C0_EA9EA0);
+// INCLUDE_ASM(s32, "EA8AE0", func_802413C0_EA9EA0);
+? func_80128510(s32 *);                             /* extern */
+extern ? func_80240E2C_EA990C;
+
+void func_802413C0_EA9EA0(void) {
+    ? *sp1C;
+    s32 sp18;
+    s32 sp14;
+    s32 sp10;
+
+    sp1C = &func_80240E2C_EA990C;
+    sp14 = 0xA;
+    sp18 = 0;
+    sp10 = 1;
+    func_80128510(&sp10);
+}
 
 ApiStatus func_802413FC_EA9EDC(Evt* script, s32 isInitialCall) {
     D_80248380 = 0;
