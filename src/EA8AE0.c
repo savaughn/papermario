@@ -11,6 +11,8 @@ extern s32 D_80248388[];
 extern s32 D_80248380;
 extern s32 D_80243DD8_EAC8B8;
 extern s32 D_80243DDC_EAC8BC;
+extern s32 func_80128510(s32 *);                             
+extern void func_80240E2C_EA990C;
 
 #include "world/common/atomic/TexturePan.inc.c"
 
@@ -31,14 +33,11 @@ INCLUDE_ASM(s32, "EA8AE0", func_80240DA4_EA9884);
 INCLUDE_ASM(s32, "EA8AE0", func_80240E2C_EA990C);
 
 // INCLUDE_ASM(s32, "EA8AE0", func_802413C0_EA9EA0);
-? func_80128510(s32 *);                             /* extern */
-extern ? func_80240E2C_EA990C;
-
 void func_802413C0_EA9EA0(void) {
-    ? *sp1C;
-    s32 sp18;
-    s32 sp14;
     s32 sp10;
+    s32 sp14;
+    s32 sp18;
+    void *sp1C;
 
     sp1C = &func_80240E2C_EA990C;
     sp14 = 0xA;
