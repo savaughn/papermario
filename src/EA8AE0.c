@@ -26,7 +26,29 @@ INCLUDE_ASM(s32, "EA8AE0", func_80240B00_EA95E0);
 
 INCLUDE_ASM(s32, "EA8AE0", func_80240BD4_EA96B4);
 
-INCLUDE_ASM(s32, "EA8AE0", func_80240CD8_EA97B8);
+// INCLUDE_ASM(s32, "EA8AE0", func_80240CD8_EA97B8);
+void func_80240CD8_EA97B8(Evt *script, s32 isInitialCall) {
+    s32 *temp_s0;
+    s32 *temp_s0_2;
+    s32 *temp_s0_3;
+    s32 *temp_s0_4;
+    s32 temp_s0_5;
+    s32 temp_s2;
+    s32 temp_s3;
+
+    temp_s0 = script->ptrReadPos;
+    temp_s0_2 = temp_s0 + 4;
+    temp_s0_3 = temp_s0_2 + 4;
+    temp_s3 = dead_evt_get_variable(script, *temp_s0);
+    temp_s0_4 = temp_s0_3 + 4;
+    temp_s2 = dead_evt_get_variable(script, *temp_s0_2);
+    dead_evt_get_variable(script, *temp_s0_3);
+    dead_evt_get_variable(script, *temp_s0_4);
+    temp_s0_5 = dead_evt_get_variable(script, *(temp_s0_4 + 4));
+    (dead_evt_get_variable(NULL, -0x02FAF080) + (temp_s3 * 0x1E0) + (temp_s2 * 4))->unk6C = (f32) temp_s0_5;
+}
+
+
 
 INCLUDE_ASM(s32, "EA8AE0", func_80240DA4_EA9884);
 
