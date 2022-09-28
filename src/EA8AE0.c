@@ -28,7 +28,7 @@ INCLUDE_ASM(s32, "EA8AE0", func_80240BD4_EA96B4);
 
 // INCLUDE_ASM(s32, "EA8AE0", func_80240CD8_EA97B8);
 void func_80240CD8_EA97B8(Evt *script, s32 isInitialCall) {
-    s32 *temp_s0;
+    Bytecode *args = script->ptrReadPos;
     s32 *temp_s0_2;
     s32 *temp_s0_3;
     s32 *temp_s0_4;
@@ -36,10 +36,9 @@ void func_80240CD8_EA97B8(Evt *script, s32 isInitialCall) {
     s32 temp_s2;
     s32 temp_s3;
 
-    temp_s0 = script->ptrReadPos;
-    temp_s0_2 = temp_s0 + 4;
+    temp_s0_2 = args + 4;
     temp_s0_3 = temp_s0_2 + 4;
-    temp_s3 = dead_evt_get_variable(script, *temp_s0);
+    temp_s3 = dead_evt_get_variable(script, *args);
     temp_s0_4 = temp_s0_3 + 4;
     temp_s2 = dead_evt_get_variable(script, *temp_s0_2);
     dead_evt_get_variable(script, *temp_s0_3);
