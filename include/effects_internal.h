@@ -151,7 +151,7 @@ EffectInstance* fx_75_main(s32, f32, f32, f32, f32, s32);
 EffectInstance* firework_rocket_main(s32, f32, f32, f32, f32, f32, f32, f32, s32);
 EffectInstance* peach_star_beam_main(s32, f32, f32, f32, f32, s32);
 EffectInstance* chapter_change_main(s32, f32, f32, f32, f32, s32);
-FX_MAIN(ice_shard_main);
+void ice_shard_main(f32, u32);
 FX_MAIN(spirit_card_main);
 EffectInstance* lil_oink_main(void);
 FX_MAIN(something_rotating_main);
