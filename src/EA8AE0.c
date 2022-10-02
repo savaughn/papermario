@@ -25,25 +25,23 @@ static char* N(exit_str_2) = "kzn_20";
 INCLUDE_ASM(s32, "EA8AE0", func_80240B00_EA95E0);
 
 typedef struct Unk80240BD4 {
-    f32 unk_0;
-    f32 unk_4;
-    f32 unk_8;
+    /* 0x00 */ f32 unk_00;
+    /* 0x04 */ f32 unk_04;
+    /* 0x08 */ f32 unk_08;
 } Unk80240BD4;
 
 ApiStatus func_80240BD4_EA96B4(Evt *script, s32 isInitialCall) {
     Bytecode* args = script->ptrReadPos;
-    s32 temp_s0_5;
     s32 temp_s3 = dead_evt_get_variable(script, *args++);
     s32 temp_s2 = dead_evt_get_variable(script, *args++);
     s32 temp_s4 = dead_evt_get_variable(script, *args++);
     s32 temp_s1 = dead_evt_get_variable(script, *args++);
     s32 temp_s0 = dead_evt_get_variable(script, *args++);
     Unk80240BD4* temp_a0 = dead_evt_get_variable(NULL, MapVar(0)) + (temp_s3 * 480) + (temp_s2 * 12);
-    s32 temp;
-    
-    temp_a0->unk_0 = temp_s4;
-    temp_a0->unk_4 = temp_s1;
-    temp_a0->unk_8 = temp_s0;
+
+    temp_a0->unk_00 = temp_s4;
+    temp_a0->unk_04 = temp_s1;
+    temp_a0->unk_08 = temp_s0;
 
     return ApiStatus_DONE2;
 }
@@ -93,10 +91,10 @@ ApiStatus func_802417AC_EAA28C(Evt* script, s32 isInitialCall) {
     Bytecode* args = script->ptrReadPos;
 
     if (isInitialCall) {
-        D_80243DD8_EAC8B8 = 0;
+        D_80243DD8_EAC8B8 = FALSE;
     }
-    if (D_80243DD8_EAC8B8 != 0) {
-        D_80243DD8_EAC8B8 = 0;
+    if (D_80243DD8_EAC8B8) {
+        D_80243DD8_EAC8B8 = FALSE;
 
         dead_evt_set_variable(script, *args++, D_80243DDC_EAC8BC);
 
