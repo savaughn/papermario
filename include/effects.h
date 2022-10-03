@@ -1841,17 +1841,17 @@ typedef struct QuizmoAssistantFXData {
 } QuizmoAssistantFXData; // size = 0x20
 
 typedef struct IcePillarFXData {
-    /* 0x00 */ f32 unk_4;
-               f32 unk_8;
+    /* 0x00 */ char unk_00[0x04];
     /* 0x04 */ Vec3f pos;
     /* 0x10 */ s32 unk_10;
-               s32 unk_14;
+    /* 0x14 */ s32 unk_14;
+    /* 0x18 */ char unk_18[0x08];
     /* 0x20 */ f32 unk_20;
     /* 0x24 */ s8 unk_24;
-                u8 unk_25;
-                struct EffectInstance* unk_28;
-                f32 unk_C;
-} IcePillarFXData; // size = unknown
+    /* 0x25 */ u8 unk_25;
+    /* 0x26 */ char unk_26[0x02];
+    /* 0x28 */ struct EffectInstance* unk_28;
+} IcePillarFXData; // size = 0x3C
 
 typedef struct SunFXData {
     /* 0x00 */ s32 shineFromRight;
