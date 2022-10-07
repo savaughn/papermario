@@ -626,10 +626,7 @@ typedef struct SmokeBurstFXData {
     /* 0x18 */ s32 lifeTime;
     /* 0x1C */ s32 unk_1C;
     /* 0x20 */ f32 unk_20;
-    /* 0x24 */ u8 unk_24;
-    /* 0x25 */ u8 unk_25;
-    /* 0x26 */ u8 unk_26;
-    /* 0x27 */ u8 unk_27;
+    /* 0x24 */ Color_RGBA8 rgba;
 } SmokeBurstFXData; // size = 0x28
 
 typedef struct SweatFXData {
@@ -1297,9 +1294,18 @@ typedef struct SnakingStaticFXData {
 } SnakingStaticFXData; // size = unknown
 
 typedef struct ThunderboltRingFXData {
-    /* 0x00 */ char unk_00[0x30];
+    /* 0x00 */ s32 unk_00;
+    /* 0x04 */ Vec3f pos;
+    /* 0x10 */ s32 timeLeft;
+    /* 0x14 */ s32 lifeTime;
+    /* 0x18 */ s32 unk_18;
+    /* 0x1C */ s32 unk_1C;
+    /* 0x20 */ s32 unk_20;
+    /* 0x24 */ s32 unk_24;
+    /* 0x28 */ f32 unk_28;
+    /* 0x2C */ f32 unk_2C;
     /* 0x30 */ s32 unk_30;
-} ThunderboltRingFXData; // size = ?
+} ThunderboltRingFXData; // size = 0x34
 
 typedef struct SquirtFXData {
     /* 0x00 */ char todo[0];
